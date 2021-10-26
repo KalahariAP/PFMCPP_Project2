@@ -15,8 +15,13 @@ video: Chapter 2 - Part 3
  
  
  1) Write down the names of the 6 major primitive types available in C++  here:
- 
- 
+ bool 
+ char
+ double
+ float
+ int
+ unsigned int
+
  
  
  
@@ -59,10 +64,27 @@ void variableDeclarations()
 {
     //example:
     int number = 2; //declaration of a variable named "number", that uses the primitive type 'int', and the variable's initial value is '2'
-    
-
-    
-    ignoreUnused(number); //passing each variable declared to the ignoreUnused() function
+    bool input = true;
+    bool output = false;
+    bool mute = true; 
+    char fader = 'f';
+    char knob = 'k';
+    char power = 'p';
+    double volume = 5.5;
+    double range = 50.2;
+    double size = 10.1;
+    float herz = 5.5f;
+    float area = 50.2f;
+    float distor = 10.1f; 
+    int bassVol = 60;
+    int guitarVol = -12;
+    int drumSet = 7;
+    unsigned int kick = 20;
+    unsigned int snare = 12;
+    unsigned int hihat = 5;
+       
+    ignoreUnused(number, input, output, mute, fader, knob, power, volume, range,
+        size, herz, area, distor, bassVol, guitarVol, drumSet, kick, snare, hihat); //passing each variable declared to the ignoreUnused() function
 }
 
 /*
@@ -79,42 +101,74 @@ bool rentACar(int rentalDuration, int carType = 0)  //function declaration with 
 /*
  1)
  */
-
+bool getBandMembers(int bass, int drum, char guitar = 'G') {
+       ignoreUnused(bass, drum, guitar);
+       return{};
+}
 /*
  2)
  */
-
+bool getHand(int finger = 5, int bound = 27, char tendon = 'T') {
+       ignoreUnused(finger, bound, tendon);
+       return{};
+}
 /*
  3)
  */
-
+char getTeam(int sport = 5, int city = 1, int stadium = 4) {
+       ignoreUnused(sport, city, stadium);
+       return{};
+}
 /*
  4)
  */
-
+char getComputerName(int system, int serialNum = 1234, char model = 'M') {
+       ignoreUnused(system, serialNum, model);
+       return{};
+}
 /*
  5)
  */
-
+double getWeather(int summer, float temperature = 15.5f, int month = 7) {
+       ignoreUnused(summer, temperature, month);
+       return{};
+}
 /*
  6)
  */
-
+double getFlanger(int pedal, int depth, double rate = 8.2) {
+       ignoreUnused(pedal, depth, rate);
+       return{};
+}
 /*
  7)
  */
-
+int getClassAmp(float herz = 5.5f, float distor = 10.1f, char noise = 'N') {
+       ignoreUnused(herz, distor, noise);
+       return{};
+}
 /*
  8)
  */
-
+int getDelay(int freq, int time, double volume = 8.5) {
+       ignoreUnused(freq, time, volume);
+       return{};
+}
 /*
  9)
  */
-
+int getFilter(float kHerz = 300.5f, bool voltage = true, bool input = true) {
+       ignoreUnused(kHerz, voltage, input);
+       return{};
+}
 /*
  10)
  */
+unsigned int drumbox(unsigned int kick = 20, int snare = 4, int hihat = 16) {
+       ignoreUnused(kick, snare, hihat);
+       return{};
+}
+
 
 /*
  MAKE SURE YOU ARE NOT ON THE MASTER BRANCH
@@ -136,27 +190,27 @@ int main()
     auto carRented = rentACar(6, 2); 
     
     //1)
-    
+    auto band = getBandMembers(1, 1, 'G');
     //2)
-    
+    auto hand = getHand(5, 27, 'T');   
     //3)
-    
+    auto team = getTeam(5, 1, 50000);
     //4)
-    
+    auto computer = getComputerName(2, 1234, 'M');
     //5)
-    
+    auto weather = getWeather(4, 15.5f, 7);
     //6)
-    
+    auto flanger = getFlanger(1, 60, 8.2);
     //7)
-    
+    auto amplifier = getClassAmp(5.5f, 6, 'N');
     //8)
-    
+    auto delay = getDelay(1500, 3, 8.5);
     //9)
-    
+    auto filter = getFilter(300.5f, 500, 1);
     //10)
+    auto sequence = drumbox(20, 8, 16);
     
-    
-    ignoreUnused(carRented);
+    ignoreUnused(carRented, band, hand, team, computer, weather, flanger, amplifier, delay, filter, sequence);
     std::cout << "good to go!" << std::endl;
     return 0;    
 }
