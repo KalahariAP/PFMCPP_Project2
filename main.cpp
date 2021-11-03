@@ -101,72 +101,82 @@ bool rentACar(int rentalDuration, int carType = 0)  //function declaration with 
 /*
  1)
  */
-bool getBandMembers(int bass, int drum, char guitar = 'G') {
-       ignoreUnused(bass, drum, guitar);
-       return{};
+bool getBandMembers(int bass, int drum, char guitar = 'G')
+{
+    ignoreUnused(bass, drum, guitar);
+    return{};
 }
 /*
  2)
  */
-bool getHand(int finger = 5, int bound = 27, char tendon = 'T') {
-       ignoreUnused(finger, bound, tendon);
-       return{};
+bool getHand(int finger = 5, int bound = 27, char tendon = 'T')
+{
+    ignoreUnused(finger, bound, tendon);
+    return{};
 }
 /*
  3)
  */
-char getTeam(int sport = 5, int city = 1, int stadium = 4) {
-       ignoreUnused(sport, city, stadium);
-       return{};
+char getTeam(int sport = 5, int city = 1, int stadium = 4)
+{
+    ignoreUnused(sport, city, stadium);
+    return{};
 }
 /*
  4)
  */
-char getComputerName(int system, int serialNum = 1234, char model = 'M') {
-       ignoreUnused(system, serialNum, model);
-       return{};
+char getComputerName(int system, int serialNum = 1234, char model = 'M')
+{
+    ignoreUnused(system, serialNum, model);
+    return{};
 }
 /*
  5)
  */
-double getWeather(int summer, float temperature = 15.5f, int month = 7) {
-       ignoreUnused(summer, temperature, month);
-       return{};
+double getWeather(int summer, float temperature = 15.5f, int month = 7)
+{
+    ignoreUnused(summer, temperature, month);
+    return{};
 }
 /*
  6)
  */
-double getFlanger(int pedal, int depth, double rate = 8.2) {
-       ignoreUnused(pedal, depth, rate);
-       return{};
+double getFlanger(int pedal, int depth, double rate = 8.2)
+{
+    ignoreUnused(pedal, depth, rate);
+    return{};
 }
 /*
  7)
  */
-int getClassAmp(float herz = 5.5f, float distor = 10.1f, char noise = 'N') {
-       ignoreUnused(herz, distor, noise);
-       return{};
+int getClassAmp(float herz = 5.5f, float distor = 10.1f, char noise = 'N')
+{
+    ignoreUnused(herz, distor, noise);
+    return{};
 }
 /*
  8)
  */
-int getDelay(int freq, int time, double volume = 8.5) {
-       ignoreUnused(freq, time, volume);
-       return{};
+int getDelay(int freq, int time, double volume = 8.5)
+{
+    ignoreUnused(freq, time, volume);
+    return{};
 }
 /*
  9)
  */
-int getFilter(float kHerz = 300.5f, bool voltage = true, bool input = true) {
-       ignoreUnused(kHerz, voltage, input);
-       return{};
+int getFilter(float kHerz = 300.5f, bool voltage = true, bool input = true)
+{
+    ignoreUnused(kHerz, voltage, input);
+    return{};
 }
 /*
  10)
  */
-unsigned int drumbox(unsigned int kick = 20, int snare = 4, int hihat = 16) {
-       ignoreUnused(kick, snare, hihat);
-       return{};
+unsigned int drumbox(unsigned int kick = 20, int snare = 4, int hihat = 16)
+{
+    ignoreUnused(kick, snare, hihat);
+    return{};
 }
 
 
